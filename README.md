@@ -70,7 +70,7 @@ sequenceDiagram
     Note right of browser: The browser executes the callback function that renders the notes
 ```
 
-## Creating a sequence diagram of what happens when a user visits the single page app and creates a note: exercise 0.5
+## Creating a sequence diagram of what happens when a user visits the single page app and creates a note: exercise 0.6
 ```mermaid
 sequenceDiagram
     participant browser
