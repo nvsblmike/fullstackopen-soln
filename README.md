@@ -2,7 +2,7 @@
 ## brief description of the exercise
 This repo contains solutions to the exercises on fullstack open.
 
-## creating a sequence diagram of how a note is added to the database
+## Creating a sequence diagram of how a note is added to the database
 ```mermaid
 sequenceDiagram
     participant browser
