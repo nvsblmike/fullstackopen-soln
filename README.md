@@ -1,4 +1,5 @@
-# fullstackopen-part0
+# fullstackopen-solns
+## part0 solution in the readme file
 ## brief description of the exercise
 This repo contains solutions to the exercises on fullstack open.
 
