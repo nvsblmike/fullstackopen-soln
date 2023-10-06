@@ -1,0 +1,47 @@
+ReactDOM.createRoot(document.getElementById('root')).render(<App />) //renders its 
+//contents into the div-element, defined in the index.html, having the id value 'root'
+/**
+ * All content that needs to be rendered is usually defined as React components.
+ */
+
+ //the file App.jsx deinfes a react component with the name App.
+//first rule of frontend - keep the console open all the time
+//it is possible to render dynamic content inside a component
+
+
+= JSX =
+In practice, JSX is much like HTML with the distinction that with JSX you can easily embed dynamic
+content by writing appropriate JavaScript within curly braces.
+
+It seems like React components are returning HTML markup. However, this is not the case. 
+The layout of React components is mostly written using JSX.
+
+Although JSX looks like HTML, we are dealing with a way to write JavaScript.
+Under the hood, JSX returned by React components is compiled into JavaScript.
+
+= Multiple Components =
+const Hello = () => {
+  return (
+    <div>
+      <p>Hello World</p>
+    </div>
+  )
+}
+const App = () => {
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
+  )
+}
+
+one can do the above, and just call App in main.jsx
+Naturally, a component can be used multiple times.
+
+
+= props: passing data to components =
+It is possible to pass data to components using so-called props.
+
