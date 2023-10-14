@@ -1,33 +1,49 @@
+import { useState } from "react"
 
-const Hello = (props) => {
+const Display = ({ counter }) => {
   return (
     <div>
-      <p>Hello {props.name}, you are {props.age} years old</p>
+      {counter}
     </div>
   )
 }
 
-const Footer = () => {
+const Button = ({ handleClick, text }) => {
   return (
     <div>
-      greeting app created by <a title='github repo' href='https://github.com/mluukai'>mluukkai</a>
-    </div>
-  )
+      <button onClick={handleClick}>
+        {text}
+      </button>
+    </div>      
+  ) 
 }
 
 const App = () => {
-  const friends = ['Peter', 'Maya']
+  const [counter, setCounter] = useState(0)
+
+  const increaseByOne = () => {
+    console.log(counter)
+    return setCounter(counter + 1)
+  }
+
+  const decreaseByOne = () => {
+    console.log(counter)
+    return setCounter(counter - 1)
+  }
+
+  const resetToZero = () => {
+    console.log(counter)
+    return setCounter(0)
+  }
 
   return (
     <div>
-      <p>{friends}</p>
+      <Display counter={counter} />
+      <Button handleClick={increaseByOne} text='plus' />
+      <Button handleClick={decreaseByOne} text='minus' />
+      <Button handleClick={resetToZero} text='zero' />
     </div>
   )
 }
 
 export default App
-
-//the file App.jsx deinfes a react component with the name App.
-//first rule of frontend - keep the console open all the time
-//it is possible to render dynamic content inside a component
-
